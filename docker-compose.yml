@@ -8,6 +8,5 @@ services:
     ports: 
       - "3000:3000" 
     volumes: 
-      - C:\Users\TAHA\documents\frontend:/app
       - /app/node_modules
-           
+      - .:/app     
