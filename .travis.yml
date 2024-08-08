@@ -7,4 +7,4 @@ before_install:
  - docker build -t dokcont -f Dockerfile.dev .  
 
 script: 
- - docker run dokcont npm run test -- --coverage  
+ - docker run -e CI=true dokcont npm run test   
