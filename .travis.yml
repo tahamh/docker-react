@@ -4,8 +4,7 @@ services:
 
 
 before_install:
- - docker pull tahamh/docker-react
- - docker build -t dokcont -f dockerfile.dev .  
+ - docker build -t dokcont .  
 
 script: 
  - docker run dokcont npm run test -- --coverage  
