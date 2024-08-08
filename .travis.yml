@@ -4,7 +4,7 @@ services:
 
 
 before_install:
- - docker build -t dokcont -f dockerfile.dev . 
+ - docker build . -t dokcont -f dockerfile.dev  
 
 script: 
  - docker run dokcont npm run test -- --coverage  
