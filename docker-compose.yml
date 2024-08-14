@@ -8,19 +8,15 @@ services:
     ports: 
       - "3000:3000" 
     volumes: 
-<<<<<<< HEAD
-    
       - /app/node_modules
-      - .:/app      
+      - .:/app   
+    environment:
+      - WATCHPACK_POLLING=true
    tests:  
     build: 
      context: .
      dockerfile: Dockerfile.dev
     volumes:
      - /app/node_modules
-     - .:/app 
-    command: ["npm","run","test"]        
-=======
-      - /app/node_modules
-      - .:/app     
->>>>>>> 3467e8e2425d95c3aa22c8ca9d0167fb43b9cebe
+     - .:/app       
+        
