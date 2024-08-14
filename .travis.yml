@@ -1,3 +1,4 @@
+language: generic
 sudo: required
 services: 
  - docker 
@@ -8,3 +9,17 @@ before_install:
 
 script: 
  - docker run -e CI=true dokcont npm run test   
+
+
+deloy:
+ provider: elasticbeanstalk
+ region: "eu-west-3"
+ app: "react"
+ env: "react-env"
+ bucket_name: "elasticbeanstalk-eu-west-3-026090555600"
+ bucket_path: "react"
+ on:
+  branch: master
+ access_key_id: $AWS_ACCESS_KEY
+ secret_access_key: 
+  secure: $AWS_SECRET_KEY 
