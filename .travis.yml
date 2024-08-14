@@ -14,10 +14,10 @@ script:
 deloy:
  provider: elasticbeanstalk
  region: "eu-west-3"
- app: "react"
- env: "react-env"
+ app: "react-app"
+ env: "react-app-env"
  bucket_name: "elasticbeanstalk-eu-west-3-026090555600"
- bucket_path: "react"
+ bucket_path: "react-app"
  on:
   branch: master
  access_key_id: $AWS_ACCESS_KEY
